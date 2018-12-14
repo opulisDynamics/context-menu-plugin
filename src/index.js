@@ -54,7 +54,7 @@ function install(editor, { searchBar = true, delay = 1000, items = {}, allocate 
         e.preventDefault();
         e.stopPropagation();
 
-        const [x, y] = [e.clientX, e.clientY];
+        const [x, y] = [e.layerX, e.layerY];
 
         if (node) {
             nodeMenu.show(x, y, { node });
